@@ -19,9 +19,9 @@ import net.minecraft.client.render.Camera;
 @Mixin(value = Camera.class, priority = 1010)
 public abstract class CameraMixin
 {
-	@Inject(at = @At("HEAD"), method = "clipToSpace(D)D", cancellable = true)
-	private void onClipToSpace(double desiredCameraDistance,
-		CallbackInfoReturnable<Double> cir)
+	@Inject(method = "clipToSpace(F)F", at = @At("HEAD"), cancellable = true)
+	private void onClipToSpace(float desiredCameraDistance,
+		CallbackInfoReturnable<Float> cir)
 	{
 		cir.setReturnValue(desiredCameraDistance);
 	}
