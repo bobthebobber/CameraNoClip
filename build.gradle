@@ -5,7 +5,7 @@ buildscript {
 }
 
 plugins {
-    id 'net.fabricmc.fabric-loom-remap' version '1.14'
+    id 'net.fabricmc.fabric-loom-remap' version '1.14.10'
     id 'maven-publish'
 }
 
